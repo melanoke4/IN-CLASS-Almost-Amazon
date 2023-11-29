@@ -13,6 +13,8 @@ const showAuthors = (array) => {
 
   renderToDOM('#add-button', btnString);
 
+  if (array.length === 0) { emptyAuthors(); return; }
+
   let domString = '';
   array.forEach((item) => {
     domString += `
